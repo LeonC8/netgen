@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+chromadb
+langchain
+openai
+lark
+tiktoken
+PyPDF2
+firebase-admin
+python-decouple

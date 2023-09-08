@@ -1,0 +1,20 @@
+version: '3'
+services:
+  fastapi-app:
+    build:
+      context: ./fastapi  # Path to the directory containing your FastAPI app code and Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - my_shared_volume:/app/documents  # Mount the shared volume for FastAPI
+
+  streamlit-app:
+    build:
+      context: ./streamlit  # Path to the directory containing your Streamlit app code and Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - my_shared_volume:/app/documents  # Mount the shared volume for Streamlit
+
+volumes:
+  my_shared_volume:  # Define the shared volume
